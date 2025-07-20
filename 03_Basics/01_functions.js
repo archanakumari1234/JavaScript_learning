@@ -58,9 +58,11 @@ function userDetails(anyobject){
 userDetails(user)
 
 
-// Access the value from object through the function
+// Access the value from Array through the function
 const myNewArray = [1,3,4,5,6]
 function returnValue(getArray){
-    return getArray[2]
+    // return getArray[2]
+    console.log(`getarray ${getArray[2]}`);
 }
-console.log(returnValue(myNewArray));
+// console.log(returnValue(myNewArray));
+returnValue(myNewArray)

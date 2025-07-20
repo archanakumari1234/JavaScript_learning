@@ -13,7 +13,11 @@
 // const user = " "  //truthy
 // const user = []  //truthy
 // const user = {}  //truthy
-const user = function(){}  //truthy
+// const user = -1  //truthy
+
+
+
+// const user = function(){}  //truthy
 
 if (user) {
     console.log("got user email");

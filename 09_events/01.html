@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="img">
+            <li><img width="200px" height="100px" id="sunflower" src="https://cdn.pixabay.com/photo/2023/08/13/16/53/sunflower-8188043_640.jpg" alt="" srcset=""></li>
+            <li><img width="200px" height="100px" id="yelloflower" src="https://cdn.pixabay.com/photo/2023/08/11/18/35/flowers-8184126_640.jpg" alt="" srcset=""></li>
+            <li><img width="200px" height="100px" id="rivers" src="https://cdn.pixabay.com/photo/2023/02/21/23/04/ocean-7805312_640.jpg" alt="" srcset=""></li>
+            <li><img width="200px" height="100px" id="birds" src="https://cdn.pixabay.com/photo/2023/08/13/00/43/blue-8186653_640.jpg" alt="" srcset=""></li>
+            <li><img width="200px" height="100px" id="mountain" src="https://cdn.pixabay.com/photo/2023/07/05/18/13/mountains-8108961_640.jpg" alt="" srcset=""></li>
+            <li id="google"><a href="http://www.google.com">Google</a></li>
+        </ul>
+    </div>
+    <script>
+      1.  // document.getElementById('yelloflower').onclick = function(){
+        //     alert("page clicked")
+        // }
+
+  2.  //    const a =  document.getElementById('rivers')
+    //    a.addEventListener('click', function(){
+    //     alert("clicked rivers")
+    //    })
+
+    //  document.getElementById('rivers').addEventListener('click', function(){
+    //     alert("clicked rivers")
+    //    })
+
+    //   document.getElementById('birds').addEventListener('click', function(e){
+    //     e.stopPropagation()
+    //     console.log('Hello birds');
+    //   }, false)
+    //   document.getElementById('img').addEventListener('click', function(e){
+    //     e.stopPropagation()
+    //     console.log('Hello img');
+    //   }, false)
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault()
+    //     console.log('Google clicked');
+    //   }, false)
+
+
+    document.querySelector('#img').addEventListener('click', function(e){
+        //  console.log(e);
+        // console.log(e.target);
+        // console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        // if(e.target.tagName === 'IMG'){
+        //     let removeIt = e.target.parentNode
+        // // removeIt.remove()
+        // }
+        
+        // removeIt.parentNode.removeChild(removeIt)
+    }, false)
+    </script>
+</body>
+</html>

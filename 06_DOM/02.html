@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    <script>
+    let create = document.createElement('h1')
+    console.log(create);
+    create.className = 'aa'
+    create.id = 'bb'
+    create.textContent = 'Hello Archana'
+    document.body.appendChild(create)
+    create.style.backgroundColor = 'darkred'
+    create.style.padding = '20px'
+    create.style.textAlign = 'center'
+    create.style.borderRadius = '10px'
+    
+    let ull = document.getElementsByTagName('ul')
+    console.log(ull);
+    let lli = document.querySelectorAll('li')
+    console.log(lli);
+    lli[1].style.color = "red"
+    // lli[0].remove()
+
+  
+    lli.forEach((list) =>{
+        lli[1].remove()
+    })
+    </script>
+</body>
+</html>

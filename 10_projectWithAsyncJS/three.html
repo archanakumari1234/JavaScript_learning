@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello Archana</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <!-- <script>
+       
+       const randomColor = function() {
+        const hex = '0123456789ABCDEF'
+        let color = '#'
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random()*16)]
+       }
+       return color
+       }
+       let intervalId;
+       const startChangingColor = function(){
+        if (!intervalId) {
+            intervalId = setInterval(changeBgColor, 2000)
+        }
+        function changeBgColor(){
+            document.body.style.backgroundColor = randomColor()
+        }
+       }
+
+       const stopChangingColor = function(){
+        clearInterval(intervalId)
+        intervalId = null
+       }
+
+       document.querySelector('#start').addEventListener('click', startChangingColor);
+
+       document.querySelector('#stop').addEventListener('click', stopChangingColor)
+
+    </script> -->
+
+    <script>
+        const randomColor = function () {
+            const hex = '0123456789ABCDEF';
+            constant = '#';
+            for (i = 0; i < 6; i++) {
+                constant += hex[Math.floor(Math.random() * 16)]
+            }
+            return constant
+
+        };
+
+        let intervalId;             // accesible for also clearInterval (global variable)
+        const startChangingColor = () => {
+            if (!intervalId) {
+                intervalId = setInterval(changeBgColor, 2000)
+            }
+            function changeBgColor() {
+                document.body.style.backgroundColor = randomColor()
+            }
+        };
+        const stopChangingColor = () => {
+            clearInterval(intervalId)
+            intervalId = null;
+        }
+        // jab ham start button ko click karte hai to random color generate hona start ho jata hai aur stop btn click karte hi stop ho jata hai and dubara start karne se value overwrite karta hai isvajah se ham clearInterval me intervalId ki value null diye hai taki start btn dubara click karne se memory free mile.
+
+        document.querySelector('#start').addEventListener('click', startChangingColor)
+        document.querySelector('#stop').addEventListener('click', stopChangingColor)
+
+
+    </script>
+
+</body>
+
+</html>

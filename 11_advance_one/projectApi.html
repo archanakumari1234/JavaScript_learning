@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programming contests</h1>
+    <script>
+        let url = "https://emojihub.yurace.pro/api/all"
+        let response = fetch(url)
+        response.then((v)=>{
+            return v.json()
+        }).then((contents)=>{
+            // console.log(contents);
+            for(item in contents){
+                console.log(contents[item]);
+            }
+        })
+    </script>
+</body>
+</html>

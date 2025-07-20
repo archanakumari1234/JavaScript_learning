@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bulb{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 4px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="bulb">
+    </div>
+    <button id="on">ON</button>
+   
+    <script>
+        let aa = document.querySelector('#on')
+        // let a = document.querySelector('.bulb')
+        let value = "on"
+        aa.addEventListener('click', function(){
+            if(value === "on"){
+                document.querySelector('.bulb').style.backgroundColor = 'yellow'
+                aa.innerHTML = "OFF"
+                value = "off"
+            }
+            else{
+                document.querySelector('.bulb').style.backgroundColor = 'white'
+                aa.innerHTML = "ON"
+                value = "on" 
+            }
+        })
+    </script>
+</body>
+</html>

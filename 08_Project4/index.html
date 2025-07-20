@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .h1{
+            font-size: 50px;
+        }
+        #guessField{
+            height: 35px;
+            width: 200px;
+            margin: auto 100px;
+           
+        }
+        #sub{
+            height: 35px;
+            margin: auto 110px;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 5px 25px;
+            border-radius: 5px;
+            /* width: 100px; */
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <div class="container">
+   <div class="wrapper">
+    <h1>Number Guessing Game</h1>
+   <h3>Try and guess a random number between 1 and 100.</h3>
+   <h3>You have 10 attempts to guess the right number.</h3>
+   </div>
+
+   <form action="">
+    <label for="guessField" id="guess"> <h1 class="h1">Guess a Number</h1></label>
+    <input type="text" id="guessField"><br><br>
+    <input type="submit" id="sub" value="Submit guess">
+</form>
+
+<div class="results">
+    <p>Previous Guesses: <span class="guesses"></span></p>
+    <p>Guesses Remaining: <span class="lastResult">10</span></p>
+    <p class="lowOrHi"></p>
+</div>
+    </div>
+   <script>
+    const randomNumber = Math.floor(Math.random()*100+1);
+    const userInput = document.querySelector('#guessField').value
+    const submit = document.querySelector('#sub')
+    const guessSlot = document.querySelector('.guesses')
+    const remaining = document.querySelector('.lastResult')
+    const lowOrHi = document.querySelector('.lowOrHi')
+    const startOver = document.querySelector('.results')
+
+    const p = document.createElement('p')
+
+    let prevGuess = []
+    let numGuess = 1
+    let playGame = true
+
+    function validateGuess(guess){
+
+    }
+
+    function checkGuess(guess){
+
+    }
+
+    function displayGuess(guess){
+        
+    }
+
+    function displayMsg(msg){
+        
+    }
+
+    function endGame(guess){
+        
+    }
+
+    function newGame(guess){
+        
+    }
+   </script>
+</body>
+</html>

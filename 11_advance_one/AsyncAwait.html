@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async Await</h1>
+    <script>
+    async function arc(){
+        let delhiWeather = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve('28 degree weather of Delhi')
+        }, 2000)
+    })
+    let MeerutWeather = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve('30 degree weather of Meerut')
+        }, 5000)
+    })
+    
+    // delhiWeather.then((value)=>{
+    //     console.log(value);
+    // });
+    // MeerutWeather.then((value)=>{
+    //     console.log(value);
+    // });
+   console.log('Fetching Delhi Weather Please wait....');
+    let delhiW = await delhiWeather;
+    console.log('Fetching Delhi Weather: ' , delhiW);
+
+    console.log('Fetching Meerut Weather Please wait....');
+    let MeerutW = await MeerutWeather;
+    console.log('Fetching Meerut Weather: ' , MeerutW);
+
+    return [delhiW, MeerutW]
+    };
+    const cherry = () =>{
+        console.log('Hey I am Cherry and I am  waiting.');
+    }
+    
+    const main1 = async () =>{
+        console.log('Welcome to weather control now!');
+        let a = await arc();
+        let b = await cherry()
+        
+    }
+    main1()
+
+    //  const hello =   async function fun(){
+    //      return 'Hello hey'
+    //     }
+    //       hello().then((x)=>{
+    //         console.log(x);
+    //       });
+    </script>
+</body>
+</html>

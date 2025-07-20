@@ -13,7 +13,7 @@ if(true){
 // console.log(b);
 
 if(true){
-    var c = 2000    // its global scop variable
+    var c = 2000    // its global scope variable
     // console.log(c);
 }
 console.log(c);

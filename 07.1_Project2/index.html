@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 50px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121; color: white;">
+    <h1>BMI Calculator</h1>
+    <form action="">
+        <label for="height">Height in cm</label>
+        <input type="text" id="height"> <br><br>
+        <label for="weight">Weight in Kg</label>
+        <input type="text" id="weight"> <br><br>
+        <button>Calculate</button>
+    </form><br>
+    <div class="result"></div>
+    <div class="guid"></div>
+    <h2>BMI Weight Guide</h2>
+    <p>Under Weight = Less than 18</p>
+    <p>Normal Weight = Between 18 to 25</p>
+    <p>Over Weight = Greater than 25</p>
+
+    <script>
+        let form = document.querySelector('form')
+        form.addEventListener('submit', function (e) {
+            e.preventDefault()
+
+            const height = parseInt(document.querySelector('#height').value)
+            const weight = parseInt(document.querySelector('#weight').value)
+            const results = document.querySelector('.result')
+            const guid = document.querySelector('.guid')
+
+            if (height === '' || height < 0 || isNaN(height)) {
+               const a = results.innerHTML = ` ${height},  Please give a valid height`
+                guid.innerHTML = ""
+            }
+            else if (weight === '' || weight < 0 || isNaN(weight)) {
+                results.innerHTML = ` ${weight},  Please give a valid weight`
+                guid.innerHTML = ""
+            }
+            else {
+                const bmi = (weight / ((height * height) / 100)).toFixed(2)
+                // show the result
+                const a = results.innerHTML = `<span>${bmi}</span>`
+                if (bmi < 18) {
+                guid.innerHTML = 'Under Weight'
+                }
+                else if(bmi>18 && bmi<25){
+                    guid.innerHTML = 'Normal Weight'
+                }
+               else if (bmi > 25) {
+                guid.innerHTML = 'Over Weight'
+                }
+            
+            }
+
+            
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>
